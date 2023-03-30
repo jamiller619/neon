@@ -1,5 +1,14 @@
 # A template repo
 
+## Upgrading
+
+To upgrade all dependencies to their latest versions, run
+the command:
+
+```sh
+yarn upgrade-interactive --latest
+```
+
 ## Linting
 
 The `.eslintrc.json` file was split into two files:
