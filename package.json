@@ -13,7 +13,7 @@
     "prepare": "yarn husky install"
   },
   "lint-staged": {
-    "*.ts": [
+    "*.ts,*.tsx": [
       "prettier --write",
       "eslint"
     ],
