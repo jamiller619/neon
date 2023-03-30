@@ -12,6 +12,17 @@
     "lint:fix": "yarn lint --fix",
     "prepare": "yarn husky install"
   },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.html": [
+      "eslint",
+      "prettier --write"
+    ],
+    "*.css": "prettier --write"
+  },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
