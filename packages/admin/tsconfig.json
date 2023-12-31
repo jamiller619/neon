@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["DOM", "ES2023"],
+    "paths": {
+      "~/*": ["./src/*"],
+      "@neon/shared/*": ["../shared/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.json"]
+}

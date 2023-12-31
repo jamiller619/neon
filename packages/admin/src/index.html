@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" class="dark-theme" style="color-scheme: dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>neon</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="http://localhost:2427/assets/play-icon.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import RefreshRuntime from 'http://localhost:5173/@react-refresh'
+
+      RefreshRuntime.injectIntoGlobalHook(window)
+      window.$RefreshReg$ = () => {}
+      window.$RefreshSig$ = () => (type) => type
+      window.__vite_plugin_react_preamble_installed__ = true
+    </script>
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
+    <script type="module" src="http://localhost:5173/index.tsx"></script>
+  </body>
+</html>

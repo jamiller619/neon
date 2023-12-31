@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Cal Sans';
+  src: url('/assets/fonts/CalSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/assets/fonts/Inter-roman.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/assets/fonts/Inter-italic.var.woff2') format('woff2');
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(
+    135deg,
+    var(--iris-2) 20%,
+    var(--sky-1),
+    var(--gray-2) 80%
+  );
+}
+
+#root {
+  height: 100%;
+}
+
+.radix-themes {
+  height: 100%;
+  overflow-x: hidden;
+  --default-font-family: 'Inter var', sans-serif;
+  --heading-font-family: 'Cal Sans';
+  --heading-letter-spacing: 0.05em;
+  --gray-a1: hsl(205.71deg 17.25% 6.84% / 83%);
+  --scale-1: var(--space-6);
+
+  & a {
+    text-decoration-thickness: max(2px, 0.1em);
+  }
+}

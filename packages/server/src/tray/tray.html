@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>neon media server</title>
+    <style>
+      * {
+        color: inherit;
+        font-size: 14px;
+        font-family: sans-serif;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background: #161616;
+        color: #a1a1a1;
+        border-radius: 0.5em;
+        overflow: hidden;
+      }
+
+      .container a {
+        padding: 1rem 1rem 1rem 2rem;
+        display: block;
+      }
+
+      .container a:hover {
+        background-color: rgb(255 255 255 / 6%);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li><a href="#">Open Admin Client</a></li>
+        <li><a href="#">Quit</a></li>
+        <li><a href="#">Open Admin Client</a></li>
+        <li><a href="#">Quit</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    document.body.addEventListener('click', (ev) => {
+      ev.preventDefault()
+
+      console.log('you clicked', ev.target)
+    })
+  </script>
+</html>

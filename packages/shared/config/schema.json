@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "ConfigSchema",
+  "type": "object",
+  "required": ["admin.autoLaunch", "ffmpeg.url", "ffprobe.url", "http.port"],
+  "additionalProperties": false,
+  "properties": {
+    "admin.autoLaunch": {
+      "title": "Auto Launch Admin Client",
+      "type": "boolean",
+      "default": true,
+      "description": "Should the Admin client open in a new browser tab when the server starts?"
+    },
+    "ffmpeg.url": {
+      "title": "FFmpeg Binary",
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the FFmpeg binary file."
+    },
+    "ffprobe.url": {
+      "title": "FFprobe Binary",
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the FFprobe binary file."
+    },
+    "http.port": {
+      "title": "HTTP Server Port",
+      "type": "number",
+      "default": 2427,
+      "description": "The port the HTTP server will listen on."
+    }
+  }
+}

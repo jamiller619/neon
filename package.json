@@ -1,16 +1,29 @@
 {
-  "name": "template",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "neon",
+  "description": "Neon Media Server",
+  "author": "hello@jamiller.me",
+  "version": "0.0.1",
   "license": "MIT",
   "type": "module",
+  "private": true,
+  "repository": "https://github.com/jamiller619/neon",
   "engines": {
-    "node": ">= 18.15"
+    "node": ">= 20.10"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
+    "dx": "yarn concurrently --n admin,server \"yarn dx:admin\" \"yarn dx:server\"",
+    "dx:admin": "yarn workspace @neon/admin dx",
+    "dx:server": "yarn workspace @neon/server dx",
+    "build": "yarn clean:server && yarn build:server && yarn build:admin",
+    "build:admin": "yarn workspace @neon/admin build",
+    "build:server": "yarn workspace @neon/server build",
     "lint": "eslint --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix",
-    "prepare": "yarn husky install"
+    "prepare": "yarn husky install",
+    "clean:server": "yarn rimraf packages/server/dist"
   },
   "lint-staged": {
     "*.ts,*.tsx": [
@@ -24,18 +37,20 @@
     "*.css": "prettier --write"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
-    "eslint": "^8.37.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "husky": "^8.0.0",
-    "lint-staged": "^13.2.0",
-    "prettier": "^2.8.7",
-    "typescript": "^5.0.2"
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
   },
   "packageManager": "yarn@1.22.19"
 }

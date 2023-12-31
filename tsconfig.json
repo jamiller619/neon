@@ -2,11 +2,11 @@
   "compilerOptions": {
     "rootDir": ".",
 
-    "target": "ES2022",
+    "target": "ESNext",
     "module": "ESNext",
-    "lib": ["ES2022"],
+    "lib": ["ES2023"],
 
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -14,6 +14,7 @@
 
     "skipLibCheck": true,
     "newLine": "lf",
+    "noErrorTruncation": true,
 
     "strict": true,
     "noImplicitAny": true,

@@ -1,0 +1,54 @@
+{
+  "name": "@neon/server",
+  "description": "Neon Media Server",
+  "author": "hello@jamiller.me",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
+  "repository": "https://github.com/jamiller619/neon/tree/main/packages/server",
+  "engines": {
+    "node": ">= 20.10"
+  },
+  "scripts": {
+    "start": "yarn electron --trace-warnings .",
+    "build": "yarn tsup --loader \".html=file\" --loader \".env=text\" --loader \".sql=text\"",
+    "dx": "yarn build --watch --onSuccess \"electron .\""
+  },
+  "devDependencies": {
+    "@types/connect-sqlite3": "^0.9.5",
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.17.10",
+    "@types/ffprobe-static": "^2.0.3",
+    "@types/slug": "^5.0.7",
+    "electron": "^28.1.0",
+    "glob": "^10.3.10",
+    "typed-emitter": "^2.1.0"
+  },
+  "dependencies": {
+    "@ctrl/video-filename-parser": "^5.1.0",
+    "@google/generative-ai": "^0.1.2",
+    "broadcast-channel": "^7.0.0",
+    "chokidar": "^3.5.3",
+    "conf": "10.2.0",
+    "connect-sqlite3": "^0.9.13",
+    "dotenv": "^16.3.1",
+    "env-paths": "^3.0.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "file-type": "16.5.4",
+    "hashids": "^2.3.0",
+    "image-size": "^1.0.2",
+    "logger": "git+https://github.com/jamiller619/logger.git",
+    "moviedb-promise": "^4.0.3",
+    "pretty-ms": "^8.0.0",
+    "slug": "^8.2.3",
+    "sql-template-tag": "^5.2.0",
+    "sqlite3": "^5.1.6",
+    "title-case": "^4.2.0"
+  },
+  "packageManager": "yarn@1.22.19"
+}
