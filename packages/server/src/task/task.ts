@@ -6,18 +6,6 @@ type TaskOptions = {
   path: string
 }
 
-// class TaskMetrics {
-//   startTime = Date.now()
-//   endTime: number | null = null
-//   cpu: CPUUsage
-//   memory: MemoryInfo
-
-//   constructor({ cpu, memory }: { cpu: CPUUsage; memory: MemoryInfo }) {
-//     this.cpu = cpu
-//     this.memory = memory
-//   }
-// }
-
 export class Task {
   name: string
   path: string
